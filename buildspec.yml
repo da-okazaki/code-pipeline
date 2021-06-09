@@ -8,9 +8,9 @@ phases:
   pre_build:
     commands:
       # 静的サイトのビルドやテストなど
-      - yarn install
-      - yarn test
-      - yarn build
+      - npm install
+      - npm run test
+      - npm run build
   build:
     commands:
       # npm run build の結果がdistディレクトリに出力されるという前提
