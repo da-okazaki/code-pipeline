@@ -10,9 +10,9 @@ phases:
       #- npm test
   build:
     commands:
-      - npm build
+      - npm run-script build
       - aws s3 ls
   post_build:
     commands:
-      - aws s3 sync /build s3://code-pipeline-tutorial-2021 --acl public-read
+      - aws s3 sync build s3://code-pipeline-tutorial-2021 --acl public-read
 # - aws cloudfront create-invalidation --distribution-id <キャッシュクリアするCloudFrontのDestributionID> --paths '/*'
